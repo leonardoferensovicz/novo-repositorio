@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+font-family: "Montserrat", serif;
+font-weight: 450;
+margin:0;
+padding:0;
+border:0;
+}
+
+/*==================================*/
+
+.rodape{
+    border: 1px solid #5444;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* display flex */
+.inicio{
+    display: flex;
+    flex-direction:row;
+    justify-content: flex-start;
+}
+
+
+.post{
+    display: flex;
+    text-align: start;
+    padding: 4px
+}
+
+
+.descricaopost{
+    width: 100%;
+    text-align: start;
+    margin-left: 1rem;
+}
+
+/* display flex */
+
+
+.titulo{
+    color:#FF7300;
+}
+
+
+.nomedesc h1{
+    font-size: 2rem;
+    padding-bottom: 10px;
+}
+
+
+.fita{
+    background-color: #FF7300;
+    padding: 2px;
+    min-width: 100vw;
+}
+
+/*==================================*/
+
+.descricaopost h2{
+    font-size: 2rem;
+    padding-bottom: 15px;
+}
+
+body{
+    padding: 2rem;
+}
+/*==================================*/
+.botao{
+    width: 300px;
+    height: 50px;
+    background-color: #FF7300;
+    border-radius: 5px;
+}
+
+h2{color: #FF7300};
