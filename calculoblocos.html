@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Portfolio Leonardo Ferensovicz</title>
+    <meta name="description" content="de meus projetos criados enquanto eu aprendia linguagem de programação"</meta>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<header>
+    <section class="inicio"> <!--TITULO/FOTO-->
+        <img src="assets/leonardo.webp" width="350" height="350">
+        <div class="nomedesc">
+            <h1 class="titulo">Leonardo Ferensovicz</h1>
+            <p class="bemvindo">Bem-vindo ao meu Portfólio!</p><br>
+            <p class="subtitulo">
+                Aqui, você encontrará uma seleção dos projetos que desenvolvi,
+                fruto do conhecimento adquirido ao longo dos meus estudos.
+                Cada trabalho reflete minha dedicação, aprendizado contínuo
+                e a aplicação de habilidades técnicas para resolver problemas
+                de maneira criativa e eficaz. Sinta-se à vontade para explorar
+                os detalhes de cada projeto e entender melhor o processo de
+                desenvolvimento por trás de cada um deles.</p>
+        </div>
+    </section>
+</header>
+
+<br><div class="fita"></div><br>
+
+<body> 
+    <section class="post"><!--1 POST-->
+        <img class= foto src="assets/menucalculos.png" width="850" height="650"</img>
+        <div class="descricaopost">
+            <h2 class="posttitle">Calculo de Blocos</h2>
+            <p class="tag">Phyton</p>
+            <br>
+            <p>Após aprimorar meus conhecimentos em Python, desenvolvi um programa voltado para otimizar um 
+                processo de trabalho que identifiquei como uma oportunidade de melhoria. Anteriormente, na 
+                venda de blocos de anotações e blocos de rifas, realizávamos cálculos manuais, o que gerava 
+                a possibilidade de erros na venda do material. O objetivo deste programa é facilitar o lançamento 
+                dos materiais no sistema, automatizando o cálculo da quantidade de folhas utilizadas na produção 
+                e o valor referente à mão de obra.
+                <br>
+                <br>
+                Além disso, aperfeiçoei o programa com o uso do CustomTkinter, criando uma interface interativa 
+                e visualmente agradável. Nesse sistema, também incorporei outra funcionalidade desenvolvida por mim,
+                 que é o cálculo de lona, contribuindo para a otimização do tempo de trabalho da equipe.
+                 <br>
+                 <br>
+                Você pode testar o programa realizando o download:</p>
+        </div>
+    <h2 class="titulocodigo">Codigo:</h2>
+    <textarea class=lonacodigo name="codigolona" id="codigolona" placeholder="codigoaqui" cols="50" rows="5" readonly>
+##IMPORT
+        import tkinter as tk
+        import customtkinter as ctk
+        from PIL import Image, ImageTk
+        from tkinter import *
+        import math
+        import webbrowser
+        
+###JANELA###
+        janela = ctk.CTk()
+        ctk.set_appearance_mode ("dark")
+        ctk.set_default_color_theme("green")
+        janela.title("Menu Calculos")
+        janela.geometry("534x450")
+        janela.resizable(width=False, height=False)
+        janela.iconbitmap("root/ico.ico")
+        
+        
+        ctk.CTkFrame(janela,corner_radius=20,border_width=2,border_color='green',fg_color='transparent',width=250,height=435).place(x=540,y=5)
+        ctk.CTkFrame(janela,corner_radius=20,border_width=2,border_color='green',fg_color='transparent',width=250,height=435).place(x=275,y=5)
+        ctk.CTkFrame(janela,corner_radius=20,border_width=2,border_color='green',fg_color='transparent',width=250,height=435).place(x=10,y=5)
+        
+        from PIL import Image
+        fundoimg= ("root/fundo.png")
+        fundo= ctk.CTkImage(Image.open(fundoimg),size=(534, 450))
+        fundob= ctk.CTkLabel(janela, image=fundo,bg_color='transparent',text=" ").place(x=0,y=0)
+        
+################
+        
+###CALCULO BLOCOS##
+    #VARIAVEIS
+        varquantidade = ctk.IntVar(value=0)
+        varporfolha= ctk.IntVar(value=0)
+        varinternas= ctk.IntVar(value=0)
+        varserrilha= ctk.IntVar(value=0)
+        vargrampo= ctk.IntVar(value=0)
+        
+    #CALCULO
+        def calcular():
+            internasresult=(varquantidade.get() * varinternas.get() / varporfolha.get())
+            capasresult=(varquantidade.get() / varporfolha.get())
+            microc=(varserrilha.get() * internasresult)
+            microcresult=round (microc,2)
+            cola = varinternas.get() * varquantidade.get() / 50
+            colaround=math.ceil(cola)
+            gramporesul=(vargrampo.get() * varquantidade.get())
+            internasround=round(internasresult)
+            round(internasround,2)
+        
+            if capasresult %2==0:
+               around2=int(capasresult)
+               fevinternas=internasround*2
+               fevcapas=around2*2
+               pass
+            else:
+               around=capasresult+1
+               around2=int(around)
+               fevinternas=internasround*2
+               fevcapas=around2*2
+            resultado.configure(text=(f"INTERNAS: {internasround}  |  FeV: {fevinternas}\n"
+                                      f"CAPAS: {around2}  |  FeV:{fevcapas}\n"
+                                      f"MICROSERRILHAS: {int(microcresult)}\n"
+                                      f"COLA: {int(colaround)}\n"
+                                      f"GRAMPOS: {int(gramporesul)}")
+            )
+        
+    ##ENTRADAS
+        #ctk.CTkLabel(janela,text='CALCULO DE BLOCOS',font=('Futura md bt',18),corner_radius=25,fg_color='green',text_color='black',anchor="e", justify='center').place(x=27,y=15)
+        ctk.CTkLabel(janela, text="Quantidade de blocos?", font=("calibri",12)).place(x=60,y=50)
+        ctk.CTkLabel(janela, text="Quantas folhas internas?", font=("calibri",12)).place(x=60,y=100)
+        ctk.CTkLabel(janela, text="Quantos cabem na folha?", font=("calibri",12)).place(x=60,y=150)
+        ctk.CTkLabel(janela, text="Quantas serrilhas por folha?", font=("calibri",12)).place(x=60,y=200)
+        ctk.CTkLabel(janela, text="Quantos grampos por bloco?", font=("calibri",12)).place(x=60,y=250)
+        
+        quantidade = ctk.CTkEntry(janela,textvariable=varquantidade,height=20,width=150).place(x=60,y=75)
+        internas = ctk.CTkEntry(janela,textvariable=varinternas,height=20,width=150).place(x=60,y=125)
+        porfolha = ctk.CTkEntry(janela,textvariable=varporfolha,height=20,width=150).place(x=60,y=175)
+        serrilha = ctk.CTkEntry(janela,textvariable=varserrilha,height=20,width=150).place(x=60,y=225)
+        grampo = ctk.CTkEntry(janela,textvariable=vargrampo,height=20,width=150).place(x=60,y=275)
+        
+        apply = ctk.CTkButton(janela, font=("futura md bt",15), height=20,width=150,text="Calcular",command=calcular).place(x=60,y=310)
+        
+        resultado= ctk.CTkButton(janela,hover=False,text="",text_color="#21e802",fg_color='#303030',bg_color='transparent',corner_radius=10,width=210,height=77,font=("Montserrat SemiBold",10))
+        
+        resultado.place(x=30,y=350)
+###############
+        
+ ##SOLDA+ILHOS##
+     #VARIAVEIS
+        varcomprimento = (ctk.IntVar(value=0))
+        varaltura= (ctk.IntVar(value=0))
+        varilhos= (ctk.IntVar(value=0))
+        
+    #CALCULO
+        def calcular2():
+            perimetro = varaltura.get() + varcomprimento.get() * 2
+            perimetro2 = perimetro/1000
+            perimetrofinal=round(perimetro2,1)
+            ilhosresult = perimetro / varilhos.get()
+        
+            if ilhosresult % 2 == 0:
+                ilhosarredonda = int(ilhosresult)
+            else:
+                ilhosarredonda = math.ceil(ilhosresult)
+            
+            resultado2.configure(text=(f"SOLDA: {perimetrofinal}\n"
+                                       f"ILHOS: {ilhosarredonda}"))
+        
+        #ctk.CTkLabel(janela,text='SOLDA+ILHOS',font=('Futura md bt',18),corner_radius=25,fg_color='green',text_color='black',anchor="e", justify='center').place(x=320,y=15)
+        ctk.CTkLabel(janela, text="Comprimento da Lona?", font=("calibri",12)).place(x=327,y=50)
+        ctk.CTkLabel(janela, text="Altura da lona?", font=("calibri",12)).place(x=327,y=100)
+        ctk.CTkLabel(janela, text="Ilhos a cada quantos mm?", font=("calibri",12)).place(x=327,y=150)
+        
+        comprimento = ctk.CTkEntry(janela,textvariable=varcomprimento,height=20,width=150).place(x=327,y=75)
+        altura = ctk.CTkEntry(janela,textvariable=varaltura,height=20,width=150).place(x=327,y=125)
+        ilhos = ctk.CTkEntry(janela,textvariable=varilhos,height=20,width=150).place(x=327,y=175)
+        
+        apply2 = ctk.CTkButton(janela, font=("futura md bt",15), height=20,width=150,text="Calcular",command=calcular2).place(x=327,y=210)
+        
+        resultado2= ctk.CTkButton(janela, text="",hover=False,text_color="#21e802",corner_radius=10,fg_color='#303030',bg_color='transparent',width=210,height=80,font=("Montserrat SemiBold",10,))
+        resultado2.place(x=295,y=250)
+        
+##############
+        
+    ##VISUAL
+        from PIL import Image
+        import webbrowser
+        
+        manarimimg = ("root/manarim.png")
+        manarim = ctk.CTkImage(Image.open(manarimimg), size=(212, 52)) 
+        mnm = ctk.CTkLabel(janela, image=manarim,bg_color='transparent',text=" ")
+        mnm.place(x=290,y=335)
+        
+        devimg = ("root/dev.png")
+        dev = ctk.CTkImage(Image.open(devimg),size=(143, 14))
+        devb= ctk.CTkLabel(janela, image=dev,bg_color='transparent',text="")
+        devb.place(x=332,y=395)
+        
+        tituloimg= ("root/titulo.png")
+        titulo= ctk.CTkImage(Image.open(tituloimg),size=(215, 30))
+        titulob= ctk.CTkLabel(janela, image=titulo,fg_color='transparent',bg_color='transparent',text=" ").place(x=27,y=17)
+        
+        tituloimg2= ("root/titulo2.png")
+        titulo2= ctk.CTkImage(Image.open(tituloimg2),size=(215, 30))
+        titulob2= ctk.CTkLabel(janela, image=titulo2,fg_color='transparent',bg_color='transparent',text=" ").place(x=290,y=17)
+        
+        def abrir_link(event):
+            webbrowser.open("https://www.linkedin.com/in/leonardo-ferensovicz-108bb01b1/")
+        devb.bind("<Button-1>",abrir_link)
+        
+        
+##################################
+        
+        janela.mainloop()
+    </textarea><br>
