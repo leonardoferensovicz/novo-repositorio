@@ -29,30 +29,10 @@
 
 <br><div class="fita"></div><br>
 
-<body> 
-    <section class="post"><!--1 POST-->
-        <img class= foto src="assets/menucalculos.png" width="850" height="650"</img>
-        <div class="descricaopost">
-            <h2 class="posttitle">Calculo de Blocos</h2>
-            <p class="tag">Phyton</p>
-            <br>
-            <p>Após aprimorar meus conhecimentos em Python, desenvolvi um programa voltado para otimizar um 
-                processo de trabalho que identifiquei como uma oportunidade de melhoria. Anteriormente, na 
-                venda de blocos de anotações e blocos de rifas, realizávamos cálculos manuais, o que gerava 
-                a possibilidade de erros na venda do material. O objetivo deste programa é facilitar o lançamento 
-                dos materiais no sistema, automatizando o cálculo da quantidade de folhas utilizadas na produção 
-                e o valor referente à mão de obra.
-                <br>
-                <br>
-                Além disso, aperfeiçoei o programa com o uso do CustomTkinter, criando uma interface interativa 
-                e visualmente agradável. Nesse sistema, também incorporei outra funcionalidade desenvolvida por mim,
-                 que é o cálculo de lona, contribuindo para a otimização do tempo de trabalho da equipe.
-                 <br>
-                 <br>
-                Você pode testar o programa realizando o download:</p>
-        </div>
-    <h2 class="titulocodigo">Codigo:</h2>
-    <textarea class=lonacodigo name="codigolona" id="codigolona" placeholder="codigoaqui" cols="50" rows="5" readonly>
+<body class="body2"> 
+    <section class="postblocos"><!--1 POST-->
+        <img class= fotopostmenu src="assets/menublocos.gif" width="670" height="600"</img>
+    <textarea class=blococodigo name="blocodogio" id="blococodigo" placeholder="codigoaqui" cols="10" rows="2" readonly>
 ##IMPORT
         import tkinter as tk
         import customtkinter as ctk
@@ -201,10 +181,40 @@
         
         def abrir_link(event):
             webbrowser.open("https://www.linkedin.com/in/leonardo-ferensovicz-108bb01b1/")
-        devb.bind("<Button-1>",abrir_link)
-        
-        
+        devb.bind("<Button-1>",abrir_link)        
 ##################################
         
         janela.mainloop()
     </textarea><br>
+
+</body>
+
+<!-- session -->
+
+    <section>
+    <div class="textopostblocos">
+        <h2 class="blocostitulo">Calculo de Blocos</h2>
+        <p class="tag">Phyton</p>
+        <br>
+        <p class="textoblocos">Após aprimorar meus conhecimentos em Python, desenvolvi um programa voltado para otimizar um 
+            processo de trabalho que identifiquei como uma oportunidade de melhoria. Anteriormente, na 
+            venda de blocos de anotações e blocos de rifas, realizávamos cálculos manuais, o que gerava 
+            a possibilidade de erros na venda do material. O objetivo deste programa é facilitar o lançamento 
+            dos materiais no sistema, automatizando o cálculo da quantidade de folhas utilizadas na produção 
+            e o valor referente à mão de obra.
+            <br>
+            <br>
+            Além disso, aperfeiçoei o programa com o uso do <i>CustomTkinter</i>, criando uma interface interativa 
+            e visualmente agradável. Nesse sistema, também incorporei outra funcionalidade desenvolvida por mim,
+             que é o cálculo de lona, contribuindo para a otimização do tempo de trabalho da equipe.
+             <br>
+             <br>
+            Você pode testar o programa realizando o download:</p>
+    </div>
+</section>
+    <div>
+        <br>
+        <a href="Index.html">
+        <button class="voltar">Voltar</button>
+    </a>
+    </div>

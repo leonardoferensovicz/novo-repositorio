@@ -1,27 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
-font-family: "Montserrat", serif;
+font-family: "Montserrat", serif; 
 font-weight: 450;
 margin:0;
 padding:0;
 border:0;
+h2{color: #FF7300};
 }
 
-/*==================================*/
-.titulo {
-    color:#FF7300;
-}
-
-.bemvindo{
-    font-size: 26px;
-}
-.subtitulo{
-    width: 85%;
-    font-size: 20px;
-}
-
-.rodape{
+/* RODAPÉ DA PAGINA */
+.rodape{ 
     border: 3px solid #5444;
     display: flex;
     flex-direction: column;
@@ -34,20 +23,20 @@ border:0;
     height: 50px;
     background-color: #FF7300;
 }
-/* display flex */
+/* CORPO PAGINA PRINCIPAL */
 .inicio{
     display: flex;
     flex-direction:row;
     justify-content: flex-start;
 }
 
-
+/* DISPLAY DO POST */
 .post{
     display: flex;
     text-align: start;
     padding: 4px
 }
-
+/* CONFIGURAÇÃO DE TEXTO DAS TAGS */
 .tag{
     font-weight: bold;
     font-size: 20px;
@@ -55,7 +44,7 @@ border:0;
 }
 
 
-
+/* CONFIGURAÇÃO DA DESCRIÇÃO DO POST */
 .descricaopost{
     width: 100%;
     text-align: start;
@@ -63,32 +52,52 @@ border:0;
     font-size: 20px;
 }
 
-/* display flex */
 
-
-.nomedesc h1{
-    font-size: 3rem;
-    padding-bottom: 10px;
-}
-
-
+/*SEPARAÇÃO DA PAGINA*/
 .fita{
     background-color: #FF7300;
     padding: 2px;
     min-width: 100vw;
 }
 
-/*==================================*/
 
+/* =CABEÇA= */
+
+header{
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+/* COR E TAMANHO DO TITULO DA PAGINA (MEU NOME) */
+.titulo{
+    color:#FF7300;
+    font-size: 3.5rem;
+}
+/* SUBTITULO BEM VINDO */
+.bemvindo{
+    font-size: 26px;
+}
+/* DESCRIÇÃO DO SITE*/
+.subtitulo{
+    width: 85%;
+    max-height: 350px;
+    font-size: 1.2rem;
+}
+
+
+/* DESCRIÇÃO DO POST */
 .descricaopost h2{
     font-size: 2rem;
     padding-bottom: 10px;
 }
 
+/* COFIGURAÇÃO DE ESPAÇAMENTO DO SITE */
 body{
     padding: 2rem;
 }
-/*==================================*/
+
+
+/* CONFIGURAÇÕES DOS BOTÕES DO SITE */
 .botao{
     width: 300px;
     height: 50px;
@@ -96,21 +105,58 @@ body{
     border-radius: 5px;
 }
 
-h2{color: #FF7300};
 
-/* txtarea */
+/* =============================================== */
 
+
+/* PAGINA MENUBLOCOS */
+
+
+/* TITULO DO POST */
 .titulocodigo{
     padding: 1rem;
     width: 2rem;
     height: 2rem;
 }
-
-.lonacodigo{
-    padding: 1rem;
-    border: 2px solid #000;
-    width: 90rem;
-    height: 30rem;
+/* CODIGO DO POST */
+.blococodigo{
+    background-color: #f7f7f7;
+    border: 2px solid #FF7300;
+    width: 55rem;
+    height: 35rem;
     resize: none;
     font-size: 12px;
+    padding: 1rem;
+    margin-left: 2rem;
+    max-width: 600px;
+
+}
+
+/* DISPLAY DO POST */
+.postblocos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+/* DESCRIÇÃO DO POST */
+.textopostblocos{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    max-width: 78%;
+    width: auto;
+    margin-top: 10px;
+    font-size: 1,5rem;
+    border: 3px solid #ececec;
+    border-radius: 10px;
+    max-height: 1500px
+}
+/* VOLTAR A PAGINA INICIAL */
+.voltar{
+    width: 1300%;
+    height: 50px;
+    background-color: #FF7300;
+    border-radius: 5px;
 }
