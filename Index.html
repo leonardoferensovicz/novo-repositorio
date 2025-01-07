@@ -11,7 +11,7 @@
 
 <header>
     <section class="inicio"> <!--TITULO/FOTO-->
-        <img src="assets/leonardo.webp" width="350" height="350">
+        <img src="assets/minhafoto.png" width="350" height="350">
         <div class="nomedesc">
             <h1 class="titulo">Leonardo Ferensovicz</h1>
             <p class="bemvindo">Bem-vindo ao meu Portfólio!</p><br>
@@ -34,7 +34,7 @@
 <!-- POST SOBRE O PORTFOLIO -->
 <body> 
     <section class="post">
-        <img class= foto src="assets/postportfolio.png" width="350"</img>
+        <img class= foto src="assets/postportfolio.png" width="350" height="350"</img>
         <div class="descricaopost">
             <h2 class="posttitle">Site Portfolio</h2>
             <p class="tag">HTML, CSS e JavaScript</p>
@@ -44,13 +44,14 @@
                 de programação. Ao longo do desenvolvimento, explorei novas tecnologias, ferramentas 
                 e frameworks, aplicando-os de forma prática para construir uma plataforma funcional 
                 e visualmente atraente.</p>
-        </div>
+        <a href="calculoblocos.html">
     <button class="botao">LER</button>
-    
+        </a>
+        </section>
+
     <!--POST CALCULO BLOCOS>-->
-    </section>
     <section class="post">
-        <img src="assets/postcalculo.png" width="350"</img>
+        <img src="assets/postcalculo.png" width="350" height="350"</img>
         <div class="descricaopost">
             <h2>Calculo de blocos</h2>
             <p class="tag">Python</p>
@@ -59,15 +60,14 @@
                 o cálculo de blocos de papel, projetado para atender às necessidades 
                 da empresa em que atuava, oferecendo suporte e facilitando o 
                 trabalho dos meus colegas</p>
-        </div>
         <a href="calculoblocos.html">
-        <button class="botao">LER</button>
+    <button class="botao">LER</button>
         </a>
         </section>
 
         <!-- POST SOBRE O CALCULO DE LONA -->
     <section class="post">
-        <img src="assets/postportfolio.png" width="350"</img>
+        <img src="assets/postlona.png" width="350" height="350"</img>
         <div class="descricaopost">
             <h2>Calculo de Lona</h2>
             <p class="tag">Python</p>
@@ -76,7 +76,6 @@
                 confecção de lonas, com o intuito de melhorar a eficiência dos 
                 processos na empresa onde trabalhava, oferecendo suporte direto 
                 aos meus colegas de equipe</p>
-        </div>
         <a href="calculolona.html">
         <button class="botao">LER</button>
         </a>
@@ -84,10 +83,13 @@
 
 </body>
 <footer class="rodape">
-    <h3>Deixe seu comentário:</h3><br>
-    <input type="text" value="" placeholder="Seu nome" id="Nome"> <br>  
-    <input type="email" value="" placeholder="Seu Email" id="Email"><br>
-    <textarea name="caixadetexto" id="caixadetexto" placeholder="seu comentário aqui" cols="46" rows="5"></textarea><br>
-    <button class="enviar" onclick="alert('Obrigado por seu comentário! :D ')">Enviar</button>
+    <h2>Deixe seu comentário:</h2>
+    <form class="form" action="https://formsubmit.co/lferensovicz@gmail.com" method="POST">
+        <input type="text" class="nome" name="name" placeholder="Seu nome" id="nome" required> <br>  
+        <input type="email" class="email" name="email" placeholder="Seu email" id="email" required><br>
+        <textarea name="message" class="mensagem" id="mensagem" placeholder="Seu comentário aqui" cols="46" rows="5" required></textarea><br>
+        <input type="hidden" name="_captcha" value="false"/>
+        <button type="submit" class="enviar" value="enviar" onclick="alert('Obrigado por seu comentário! :D ')">ENVIAR</button>   
+    </form>
 </footer>
 </html>

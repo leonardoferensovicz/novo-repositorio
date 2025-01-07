@@ -7,11 +7,16 @@
     <meta name="description" content="de meus projetos criados enquanto eu aprendia linguagem de programação"</meta>
     <link rel="stylesheet" href="style.css">
 
+<head>
+    <title>Portfolio Leonardo Ferensovicz</title>
+    <meta name="description" content="de meus projetos criados enquanto eu aprendia linguagem de programação"</meta>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <header>
     <section class="inicio"> <!--TITULO/FOTO-->
-        <img src="assets/leonardo.webp" width="350" height="350">
+        <img src="assets/minhafoto.png" width="350" height="350">
         <div class="nomedesc">
             <h1 class="titulo">Leonardo Ferensovicz</h1>
             <p class="bemvindo">Bem-vindo ao meu Portfólio!</p><br>
@@ -28,12 +33,167 @@
 </header>
 
 <br><div class="fita"></div><br>
-
 <body class="body2"> 
     <section class="postblocos"><!--1 POST-->
-        <img class= fotopostmenu src="assets/postlona.png" width="670" height="600"</img>
-    <textarea class=blococodigo name="blocodogio" id="blococodigo" placeholder="codigoaqui" cols="10" rows="2" readonly>
-CODIGO AQUI
+        <img class= fotopostmenu src="assets/lonailhos.gif"</img>
+    <textarea class=blococodigo name="blococodigo" id="blococodigo" placeholder="codigoaqui" cols="10" rows="2" readonly>
+        import time
+        def programa():
+            print ("  LONA+ILHOS, descreva as medidas em milimetros")
+            comprimento = int(input("  Qual o comprimento da lona? "))
+            altura = int(input("  Qual a altura da lona? "))
+        
+            #110        
+            if comprimento in (range (100,901)):
+                print (" ")
+                print ("===========")
+                print("LONA 1,10")
+                print("  ",altura)
+                print ("===========")
+                
+                
+            #140    
+            if comprimento in (range (901,1201)):
+                print (" ")
+                print ("===========")
+                print("LONA 1,40")
+                print("  ",altura)
+                print ("===========")
+        
+            #160       
+            if comprimento in (range (1201,1401)):
+                print (" ")
+                print ("===========")
+                print("LONA 1,60")
+                print("  ",altura)
+                print ("===========")
+        
+            #180     
+            if comprimento in (range (1401,1601)):
+                print (" ")
+                print ("===========")
+                print("LONA 1,80")
+                print("  ",altura)
+                print ("===========")
+        
+            #210
+            if comprimento in (range (1601,1901)):
+                print (" ")
+                print ("===========")
+                print("LONA 2,10")
+                print("  ",altura)
+                
+            #320       
+            if comprimento in (range (1901,3001)):
+                print (" ")
+                print ("===========")
+                print("LONA 3,20")
+                print("  ",altura)
+                print ("===========")
+        
+            #Divisão
+            if (comprimento and altura) in (range (7000,99999)):
+                print (" ")
+                print ("===================================")
+                print (" Verificar possível divisão de lona")
+                print ("===================================")
+        
+            ####################
+        
+            #110
+            if altura in (range(100,901)):
+                print (" ")
+                print ("LONA 1,10")
+                print ("  ",comprimento)
+                print ("===========")
+        
+            #140 
+            if altura in (range(901,1201)):
+                print (" ")
+                print ("LONA 1,40")
+                print ("  ",comprimento)
+                print ("===========")
+                
+            #160
+            if altura in (range(1201,1401)):
+                print (" ")
+                print ("LONA 1,60")
+                print ("  ",comprimento)
+                print ("===========")
+                
+            #180
+            if altura in (range(1401,1601)):
+               print (" ")
+               print ("LONA 1,80")
+               print ("  ",comprimento)
+               print ("===========")
+               
+            #210
+            if comprimento in (range (1601,1901)):
+                print (" ")
+                print("LONA 2,10")
+                print("  ",comprimento)
+                print ("===========")
+                
+            #320
+            if altura in (range(1901,3001)):
+                print (" ")
+                print ("LONA 3,20")
+                print ("  ",comprimento)
+                print ("===========")
+        
+            #ACIMA       
+            if (altura and comprimento) in (range (7000,99999)):
+                print(" Verificar possível divisão de lona ")
+                print ("===================================")
+            
+            #CALCULOS
+            soma = (altura + comprimento)
+            soma = soma * 2
+            print (" ")
+            print ("===========================")
+            print ("o valor da solda é ",soma)
+            print ("===========================")
+            print (" ")
+            ilhos = int(input ("ilhos distribuidos a cada quantos mm? "))
+            quantia = soma / ilhos
+            print (" ")
+            print ("=================================================")
+            arredondar = int(quantia)
+            def resultado(arredondar):
+             if arredondar % 2 == 0:
+              return arredondar
+             else:
+                arredondar = arredondar+1
+                arredondar = int(arredondar)
+                return arredondar
+            resultado_final=resultado(arredondar)
+            print ("a quantia aproximada de ilhos é ", resultado_final)
+            print ("=================================================")
+            print (" ")
+        
+        
+            #REINICIO
+            def reinicio():
+                reiniciar = input ("REPETIR?:  "\
+                                   "1-  SIM  "\
+                                   "2 - NÃO  ")    
+                if reiniciar.upper() == "2" and "NAO":
+                    print ("fechando programa")
+                    sleep.time(1)
+                    return
+                elif reiniciar.upper() == "1" and "SIM":
+                    print (" \n ")
+                    programa()
+                else:
+                    print ("a resposta deve ser 1 ou 2")
+                    reinicio()
+                    
+            reinicio()
+             
+        programa()        
+        
+        
     </textarea><br>
 
 </body>
@@ -52,7 +212,7 @@ CODIGO AQUI
             <br>
             <br>
             Ele realiza o cálculo da mão de obra necessária para a produção de materiais em lona, considerando a
-            solda, que corresponde ao perímetro da lona, e também determina a quantidade de ilhoses a serem 
+            solda, que corresponde ao perímetro da lona, e também determina a quantidade de ilhos a serem 
             utilizados no material. Além disso, o código identifica o item mais adequado no sistema para o 
             processamento da lona, analisando as dimensões do material e escolhendo o melhor lado de impressão 
             para maximizar o aproveitamento do recurso.
@@ -68,10 +228,11 @@ CODIGO AQUI
             <br>
             Você pode testar este programa realizando o download através do seguinte link: [link]..</p>
     </div>
-</section>
     <div>
         <br>
         <a href="Index.html">
-        <button class="voltar">Voltar</button>
+        <button class="voltar">VOLTAR</button>
     </a>
     </div>
+</section>
+    
