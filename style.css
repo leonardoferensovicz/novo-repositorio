@@ -242,6 +242,6 @@ body{
     .descricaopost{font-size: 12px;}
     .fotopostmenu{ width:50%; height:auto;}
     .blococodigo{ width: 40%; height:300px;}
-    .botao{font-size: 1rem; font-weight: bold;}
-    .voltar{font-size: 1rem; font-weight: bold;}
+    .botao{font-size: 1rem; font-weight: bold; color:black}
+    .voltar{font-size: 1rem; font-weight: bold; color:black}
     }
