@@ -132,7 +132,10 @@ header{
 body{
     padding: 7rem;
 }
-
+.foto{
+    border: 0px;
+    border-radius: 1rem;
+}
 .body2{
     display: flex;
     flex-direction: column;
