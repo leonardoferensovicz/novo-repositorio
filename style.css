@@ -170,7 +170,7 @@ body{
 }
 /* CODIGO DO POST */
 .blococodigo{
-    width: 32rem;
+    width: 31rem;
     max-width: 600px;
     height: 26rem;
     background-color: #f7f7f7;
@@ -179,7 +179,6 @@ body{
     padding: 1rem;
     margin-left: 2rem;
     resize: none;
-
 }
 
 /* DISPLAY DO POST */
@@ -205,8 +204,9 @@ body{
 }
 
 .fotopostmenu{
-    width:520px;
+    width:500;
     height:450px;
+    
 }
 /* VOLTAR A PAGINA INICIAL */
 .voltar{
