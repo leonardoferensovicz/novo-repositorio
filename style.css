@@ -158,9 +158,13 @@ body{
 
 /* =============================================== */
 
+/* CONSTRUCAO */
+
+.construcao{
+    text-align: center;
+}
 
 /* PAGINA MENUBLOCOS */
-
 
 /* TITULO DO POST */
 .titulocodigo{
@@ -206,7 +210,7 @@ body{
 .fotopostmenu{
     width:500;
     height:450px;
-    
+
 }
 /* VOLTAR A PAGINA INICIAL */
 .voltar{
