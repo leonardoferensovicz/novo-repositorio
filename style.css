@@ -37,6 +37,7 @@ h2{color: var(--color1)};
     cursor: pointer;
     transition: 0.5s;
     color: white;
+    font: inherit;
 }
 .enviar:hover {
     background: linear-gradient(90deg, rgb(65, 99, 253) 0%, rgb(99, 120, 253) 54%, rgb(76, 90, 243) 100%);
