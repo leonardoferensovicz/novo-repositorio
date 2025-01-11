@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Portfolio Leonardo Ferensovicz</title>
+    <meta name="description" content="Bem-vindo ao meu portfólio! Este é o espaço onde compartilho meus projetos, registrando minha evolução e aprendizados ao longo da jornada no mundo da programação. Aqui, você encontrará exemplos do meu progresso, desafios superados e as tecnologias que estou explorando."</meta>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<header>
+    <section class="inicio"> <!--TITULO/FOTO-->
+        <img src="assets/minhafoto.png" width="350" height="350">
+        <div class="nomedesc">
+            <h1 class="titulo">Leonardo Ferensovicz</h1>
+            <p class="bemvindo">Bem-vindo ao meu Portfólio!</p><br>
+            <p class="subtitulo">
+                Aqui, você encontrará uma seleção dos projetos que desenvolvi,
+                fruto do conhecimento adquirido ao longo dos meus estudos.
+                Cada trabalho reflete minha dedicação, aprendizado contínuo
+                e a aplicação de habilidades técnicas para resolver problemas
+                de maneira criativa e eficaz. Sinta-se à vontade para explorar
+                os detalhes de cada projeto e entender melhor o processo de
+                desenvolvimento por trás de cada um deles.</p>
+        </div>
+    </section>
+</header>
+
+<br><div class="fita"></div><br>
+
+<body class="body3">
+    <div class="container1">
+        <h2>Calculo de perímetro</h2>
+        <p>Digite o comprimento em milimetros</p>
+        <input id="comprimento" class="comprimento" type="number">
+        <p>Digite a altura em milimetros</p>
+        <input id="altura" class="altura" type="number">
+        <button class="aplicar" onclick="calcularjava()"> APLICAR</button>
+        <div id="test">
+        <p>O perímetro é:</p>
+        <h2 id=resultado class="resultado"> 0000 </h2>
+        </div>
+    </div>
+    <div class="container2">
+        <textarea class=blococodigo2 name="blococodigo" id="blococodigo2"
+        placeholder="codigoaqui" cols="10" rows="2" readonly></textarea>
+    </div>
+</body>
+
+<script>
+    let resultado = "new"
+    function calcularjava(){
+        const jscomprimento = parseFloat(document.getElementById("comprimento").value)
+        const jsaltura= parseFloat(document.getElementById("altura").value)
+        const resultado2 = (jscomprimento + jsaltura) *2
+        document.getElementById("resultado").textContent = resultado2
+}
+</script>
