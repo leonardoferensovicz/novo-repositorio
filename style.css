@@ -67,6 +67,10 @@ h2{color: var(--color1)};
     flex-direction:row;
 }
 
+.redesocial{
+    
+}
+
 /* DISPLAY DO POST */
 .post{
     display: flex;
